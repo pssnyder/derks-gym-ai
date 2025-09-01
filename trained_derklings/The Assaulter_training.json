@@ -1,0 +1,28 @@
+{
+  "name": "The Assaulter",
+  "loadout": {
+    "primaryFocusUnit": 4,
+    "secondaryFocusUnit": 5,
+    "abilitySlot1": 1,
+    "abilitySlot2": 2,
+    "abilitySlot3": 3,
+    "armorSet": 0,
+    "weaponSet": 0
+  },
+  "bounties": {
+    "killEnemyStatue": 10,
+    "killEnemyUnit": 5,
+    "damageEnemyStatue": 1,
+    "damageEnemyUnit": 1,
+    "healTeammate1": 1,
+    "healTeammate2": 1,
+    "damageHealed": 1,
+    "timeSpentHome": 0,
+    "timeSpentAway": 0,
+    "damageTaken": 0
+  },
+  "training_iterations": 10,
+  "performance_history": [
+    {
+      "iteration": 1,
+      "reward": 
