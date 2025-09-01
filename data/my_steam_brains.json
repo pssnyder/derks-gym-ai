@@ -1,0 +1,36 @@
+{
+  "created": "2025-08-31T19:50:07.527138",
+  "instructions": "Modify the strategies below to match your Steam game brains",
+  "strategies": {
+    "My_Aggressive_Brain": {
+      "description": "Replace this with your aggressive Steam brain behavior",
+      "aggression": 0.9,
+      "team_focus": 0.3,
+      "risk_tolerance": 0.8,
+      "preferred_range": "close",
+      "weapon_preference": "melee",
+      "retreat_health": 20,
+      "target_priority": "nearest_enemy"
+    },
+    "My_Defensive_Brain": {
+      "description": "Replace this with your defensive Steam brain behavior",
+      "aggression": 0.3,
+      "team_focus": 0.8,
+      "risk_tolerance": 0.2,
+      "preferred_range": "medium",
+      "weapon_preference": "ranged",
+      "retreat_health": 50,
+      "target_priority": "protect_team"
+    },
+    "My_Support_Brain": {
+      "description": "Replace this with your support Steam brain behavior",
+      "aggression": 0.4,
+      "team_focus": 0.9,
+      "risk_tolerance": 0.3,
+      "preferred_range": "medium",
+      "weapon_preference": "balanced",
+      "retreat_health": 40,
+      "target_priority": "support_teammates"
+    }
+  }
+}

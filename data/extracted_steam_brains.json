@@ -1,0 +1,262 @@
+{
+  "angrrry_peanuts": {
+    "description": "Aggressive damage-focused brain - high enemy damage/kill bounties",
+    "reward_function": {
+      "damageEnemyStatue": 0.8,
+      "damageEnemyUnit": 1.0,
+      "killEnemyStatue": 4.0,
+      "killEnemyUnit": 2.0,
+      "healTeammate1": 0.1,
+      "damageTaken": -0.5,
+      "teamSpirit": 0.2,
+      "timeSpentAwayTerritory": 0.2
+    },
+    "slots": [
+      "Talons",
+      null,
+      null
+    ],
+    "behavioral_traits": {
+      "aggression": 0.9,
+      "team_focus": 0.2,
+      "risk_tolerance": 0.8,
+      "preferred_range": "close"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "assaulter": {
+    "description": "Assault specialist - balanced aggression with tactical focus",
+    "reward_function": {
+      "damageEnemyStatue": 0.6,
+      "damageEnemyUnit": 0.8,
+      "killEnemyStatue": 3.0,
+      "killEnemyUnit": 1.5,
+      "healTeammate1": 0.2,
+      "damageTaken": -0.3,
+      "teamSpirit": 0.3,
+      "timeSpentAwayTerritory": 0.0
+    },
+    "slots": [
+      "Pistol",
+      null,
+      null
+    ],
+    "behavioral_traits": {
+      "aggression": 0.7,
+      "team_focus": 0.4,
+      "risk_tolerance": 0.6,
+      "preferred_range": "medium"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "clint_eastwood": {
+    "description": "Gunslinger - ranged combat specialist",
+    "reward_function": {
+      "damageEnemyStatue": 0.7,
+      "damageEnemyUnit": 0.9,
+      "killEnemyStatue": 3.5,
+      "killEnemyUnit": 2.0,
+      "healTeammate1": 0.1,
+      "damageTaken": -0.7,
+      "teamSpirit": 0.1,
+      "timeSpentHomeTerritory": 0.1
+    },
+    "slots": [
+      "Magnum",
+      null,
+      null
+    ],
+    "behavioral_traits": {
+      "aggression": 0.8,
+      "team_focus": 0.2,
+      "risk_tolerance": 0.3,
+      "preferred_range": "long"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "engineer": {
+    "description": "Support specialist - team-focused defensive brain",
+    "reward_function": {
+      "damageEnemyStatue": 0.3,
+      "damageEnemyUnit": 0.4,
+      "killEnemyStatue": 2.0,
+      "killEnemyUnit": 1.0,
+      "healTeammate1": 1.0,
+      "damageTaken": -0.2,
+      "teamSpirit": 0.8,
+      "timeSpentHomeTerritory": 0.5
+    },
+    "slots": [
+      null,
+      "HealingGland",
+      "Shell"
+    ],
+    "behavioral_traits": {
+      "aggression": 0.3,
+      "team_focus": 0.9,
+      "risk_tolerance": 0.4,
+      "preferred_range": "medium"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "frank": {
+    "description": "Balanced generalist brain",
+    "reward_function": {
+      "damageEnemyStatue": 0.5,
+      "damageEnemyUnit": 0.6,
+      "killEnemyStatue": 3.0,
+      "killEnemyUnit": 1.5,
+      "healTeammate1": 0.4,
+      "damageTaken": -0.4,
+      "teamSpirit": 0.5,
+      "timeSpentHomeTerritory": 0.2
+    },
+    "slots": [
+      "Pistol",
+      "HealingGland",
+      null
+    ],
+    "behavioral_traits": {
+      "aggression": 0.6,
+      "team_focus": 0.6,
+      "risk_tolerance": 0.5,
+      "preferred_range": "medium"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "nightrider": {
+    "description": "Hit-and-run specialist - high mobility, tactical strikes",
+    "reward_function": {
+      "damageEnemyStatue": 0.9,
+      "damageEnemyUnit": 0.6,
+      "killEnemyStatue": 4.0,
+      "killEnemyUnit": 1.8,
+      "healTeammate1": 0.2,
+      "damageTaken": -0.6,
+      "teamSpirit": 0.2,
+      "timeSpentAwayTerritory": 0.3
+    },
+    "slots": [
+      "Pistol",
+      null,
+      "FrogLegs"
+    ],
+    "behavioral_traits": {
+      "aggression": 0.8,
+      "team_focus": 0.3,
+      "risk_tolerance": 0.7,
+      "preferred_range": "medium"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "peacemaker": {
+    "description": "Defensive mediator - focuses on team protection",
+    "reward_function": {
+      "damageEnemyStatue": 0.2,
+      "damageEnemyUnit": 0.3,
+      "killEnemyStatue": 1.5,
+      "killEnemyUnit": 0.8,
+      "healTeammate1": 0.8,
+      "damageTaken": -0.3,
+      "teamSpirit": 0.9,
+      "timeSpentHomeTerritory": 0.7
+    },
+    "slots": [
+      null,
+      null,
+      null
+    ],
+    "behavioral_traits": {
+      "aggression": 0.2,
+      "team_focus": 0.9,
+      "risk_tolerance": 0.3,
+      "preferred_range": "medium"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "poonut": {
+    "description": "Variant peanut brain - likely moderate aggression",
+    "reward_function": {
+      "damageEnemyStatue": 0.6,
+      "damageEnemyUnit": 0.7,
+      "killEnemyStatue": 3.0,
+      "killEnemyUnit": 1.6,
+      "healTeammate1": 0.3,
+      "damageTaken": -0.4,
+      "teamSpirit": 0.4,
+      "timeSpentHomeTerritory": 0.1
+    },
+    "slots": [
+      "BloodClaws",
+      "VampireGland",
+      null
+    ],
+    "behavioral_traits": {
+      "aggression": 0.7,
+      "team_focus": 0.4,
+      "risk_tolerance": 0.6,
+      "preferred_range": "close"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "safe_t_peanut": {
+    "description": "Safety-focused defensive brain",
+    "reward_function": {
+      "damageEnemyStatue": 0.1,
+      "damageEnemyUnit": 0.2,
+      "killEnemyStatue": 1.0,
+      "killEnemyUnit": 0.5,
+      "healTeammate1": 0.9,
+      "damageTaken": -0.8,
+      "teamSpirit": 0.9,
+      "timeSpentHomeTerritory": 0.8
+    },
+    "slots": [
+      null,
+      "HealingGland",
+      "Shell"
+    ],
+    "behavioral_traits": {
+      "aggression": 0.1,
+      "team_focus": 0.95,
+      "risk_tolerance": 0.2,
+      "preferred_range": "long"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  },
+  "spicy_peanut": {
+    "description": "Spicy aggressive variant - high damage output",
+    "reward_function": {
+      "damageEnemyStatue": 0.9,
+      "damageEnemyUnit": 1.2,
+      "killEnemyStatue": 4.5,
+      "killEnemyUnit": 2.5,
+      "healTeammate1": 0.1,
+      "damageTaken": -0.4,
+      "teamSpirit": 0.1,
+      "timeSpentAwayTerritory": 0.4
+    },
+    "slots": [
+      "Blaster",
+      null,
+      null
+    ],
+    "behavioral_traits": {
+      "aggression": 0.95,
+      "team_focus": 0.15,
+      "risk_tolerance": 0.8,
+      "preferred_range": "close"
+    },
+    "primaryColor": "#ff6600",
+    "secondaryColor": "#333333"
+  }
+}
