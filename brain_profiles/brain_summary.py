@@ -66,9 +66,14 @@ SPECIAL CLASS:
    - Strategy: Damage-focused operations, territory infiltration, high survivability
    - Bounties: High damage focus (68-70), low kills (30-40), territory control
 
+11. Number Eleven - Genetic algorithm evolution derkling
+   - File: brain_profiles/special/number_eleven.py
+   - Strategy: Dynamic reward function evolution through genetic algorithms
+   - Bounties: Self-optimizing through GA (starts at all zeros)
+
 STILL TO CREATE:
 ===============
-None - All profiles complete!
+None - All profiles complete including GA evolution system!
 
 BRAIN COMPATIBILITY MATRIX:
 ==========================
@@ -163,7 +168,8 @@ def list_all_brains():
             "The Peacemaker - Balanced control specialist"
         ],
         "special": [
-            "Frank - Special operations specialist"
+            "Frank - Special operations specialist",
+            "Number Eleven - Genetic algorithm evolution derkling"
         ]
     }
     
