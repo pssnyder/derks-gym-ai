@@ -47,26 +47,26 @@ class SafeTPeanutBrain:
         """Get action based on Safe T Peanut's behavioral profile"""
         obs = observation
         
-        # Extract key information
-        self_hp = obs[ObservationKeys.Hitpoints.value]
-        has_focus = obs[ObservationKeys.HasFocus.value]
-        focus_hp = obs[ObservationKeys.FocusHitpoints.value] if has_focus else 0
+        # Extract key information (NOTE: Derk Gym uses normalized observations!)
+        self_hp = obs[ObservationKeys.Hitpoints.value] * 100  # Convert back to 0-100 range
+        has_focus = obs[ObservationKeys.HasFocus.value] > 0.5
+        focus_hp = obs[ObservationKeys.FocusHitpoints.value] * 100 if has_focus else 0
         
-        # Distances
-        friendly_statue_dist = obs[ObservationKeys.FriendStatueDistance.value]
-        enemy_statue_dist = obs[ObservationKeys.EnemyStatueDistance.value]
+        # Distances (normalized 0-1, multiply by reasonable game scale)
+        friendly_statue_dist = obs[ObservationKeys.FriendStatueDistance.value] * 50  # Scale to game units
+        enemy_statue_dist = obs[ObservationKeys.EnemyStatueDistance.value] * 50
         
         enemy_distances = [
-            obs[ObservationKeys.Enemy1Distance.value],
-            obs[ObservationKeys.Enemy2Distance.value], 
-            obs[ObservationKeys.Enemy3Distance.value]
+            obs[ObservationKeys.Enemy1Distance.value] * 50,
+            obs[ObservationKeys.Enemy2Distance.value] * 50, 
+            obs[ObservationKeys.Enemy3Distance.value] * 50
         ]
         valid_enemies = [d for d in enemy_distances if d > 0]
         closest_enemy = min(valid_enemies) if valid_enemies else 999
         
         friend_distances = [
-            obs[ObservationKeys.Friend1Distance.value],
-            obs[ObservationKeys.Friend2Distance.value]
+            obs[ObservationKeys.Friend1Distance.value] * 50,
+            obs[ObservationKeys.Friend2Distance.value] * 50
         ]
         valid_friends = [d for d in friend_distances if d > 0]
         closest_friend = min(valid_friends) if valid_friends else 999
@@ -104,6 +104,9 @@ class SafeTPeanutBrain:
             # Aggressive defense of statue
             chase_focus = self.aggression * 1.2  # Boost aggression when defending
             focus_target = 5  # Focus on nearest enemy
+            
+            # Move forward to engage threats
+            move_x = 0.5  # Active forward movement
             
             if closest_enemy < 15 and self.has_blood_claws:
                 cast_slot = 1  # Use BloodClaws (self-healing melee)
@@ -164,6 +167,25 @@ class SafeTPeanutBrain:
             focus_target = 5 if closest_enemy < 40 else 0
         
         return (move_x, rotate, chase_focus, cast_slot, focus_target)
+    
+    def get_derk_gym_config(self):
+        """Return Derk Gym configuration for this brain"""
+        return {
+            "slots": ["BloodClaws", "HealingGland", "Shell"],
+            "rewardFunction": {
+                "damageEnemyStatue": 0.20,
+                "damageEnemyUnit": 0.80,
+                "killEnemyStatue": 3.0,
+                "killEnemyUnit": 0.90,
+                "healTeammate1": 0.40,
+                "healTeammate2": 0.40,
+                "damageTaken": -0.40,
+                "teamSpirit": 0.90,
+                "timeScaling": 0.90
+            },
+            "primaryColor": "#4CAF50",
+            "secondaryColor": "#2E7D32"
+        }
 
 def test_safe_t_peanut(num_episodes=5):
     """Test Safe T Peanut implementation"""

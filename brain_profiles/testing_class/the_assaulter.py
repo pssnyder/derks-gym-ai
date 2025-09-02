@@ -58,26 +58,26 @@ class TheAssaulterBrain:
         """
         obs = observation
         
-        # Key observations
-        self_hp = obs[ObservationKeys.Hitpoints.value]
-        has_focus = obs[ObservationKeys.HasFocus.value]
-        focus_hp = obs[ObservationKeys.FocusHitpoints.value] if has_focus else 0
+        # Key observations (NOTE: Derk Gym uses normalized observations!)
+        self_hp = obs[ObservationKeys.Hitpoints.value] * 100  # Convert back to 0-100 range
+        has_focus = obs[ObservationKeys.HasFocus.value] > 0.5
+        focus_hp = obs[ObservationKeys.FocusHitpoints.value] * 100 if has_focus else 0
         
-        # Enemy analysis
+        # Enemy analysis (scale distances to game units)
         enemy_distances = [
-            obs[ObservationKeys.Enemy1Distance.value],
-            obs[ObservationKeys.Enemy2Distance.value], 
-            obs[ObservationKeys.Enemy3Distance.value]
+            obs[ObservationKeys.Enemy1Distance.value] * 50,
+            obs[ObservationKeys.Enemy2Distance.value] * 50, 
+            obs[ObservationKeys.Enemy3Distance.value] * 50
         ]
         closest_enemy = min([d for d in enemy_distances if d > 0] or [999])
         
         # Statue targeting
-        enemy_statue_distance = obs[ObservationKeys.EnemyStatueDistance.value]
+        enemy_statue_distance = obs[ObservationKeys.EnemyStatueDistance.value] * 50
         
         # Team coordination
         friend_distances = [
-            obs[ObservationKeys.Friend1Distance.value],
-            obs[ObservationKeys.Friend2Distance.value]
+            obs[ObservationKeys.Friend1Distance.value] * 50,
+            obs[ObservationKeys.Friend2Distance.value] * 50
         ]
         
         # Weapon analysis

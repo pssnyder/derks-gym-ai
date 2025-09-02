@@ -1,0 +1,90 @@
+{
+  "training_complete": true,
+  "generations": 10,
+  "population_size": 8,
+  "training_history": [
+    {
+      "generation": 1,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.253155"
+    },
+    {
+      "generation": 2,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.275687"
+    },
+    {
+      "generation": 3,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.306311"
+    },
+    {
+      "generation": 4,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.332475"
+    },
+    {
+      "generation": 5,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.351964"
+    },
+    {
+      "generation": 6,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.371080"
+    },
+    {
+      "generation": 7,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.394340"
+    },
+    {
+      "generation": 8,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.418382"
+    },
+    {
+      "generation": 9,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.475865"
+    },
+    {
+      "generation": 10,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "timestamp": "2025-09-01T22:12:31.580563"
+    }
+  ],
+  "best_individual": {
+    "fitness": 0.0,
+    "config": {
+      "slots": [
+        "BloodClaws",
+        "HealingGland",
+        "Shell"
+      ],
+      "rewardFunction": {
+        "damageEnemyStatue": 0.2352810469193533,
+        "damageEnemyUnit": 0.8320125766693779,
+        "killEnemyStatue": 3.293621395231722,
+        "killEnemyUnit": 1.1016803879281312,
+        "healTeammate1": 0.47470231960599873,
+        "healTeammate2": 0.3609088848049436,
+        "damageTaken": -0.36199646329897645,
+        "teamSpirit": 0.8863778512532072,
+        "timeScaling": 0.8907103033385798
+      },
+      "primaryColor": "#4CAF50",
+      "secondaryColor": "#2E7D32"
+    }
+  }
+}

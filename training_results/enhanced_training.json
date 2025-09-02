@@ -1,0 +1,94 @@
+{
+  "training_complete": true,
+  "generations": 5,
+  "population_size": 4,
+  "training_history": [
+    {
+      "generation": 1,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "min_fitness": 0.0,
+      "best_individual": "safe_t_000"
+    },
+    {
+      "generation": 2,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "min_fitness": 0.0,
+      "best_individual": "safe_t_000"
+    },
+    {
+      "generation": 3,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "min_fitness": 0.0,
+      "best_individual": "safe_t_000"
+    },
+    {
+      "generation": 4,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "min_fitness": 0.0,
+      "best_individual": "safe_t_000"
+    },
+    {
+      "generation": 5,
+      "best_fitness": 0.0,
+      "avg_fitness": 0.0,
+      "min_fitness": 0.0,
+      "best_individual": "safe_t_000"
+    }
+  ],
+  "best_individual": {
+    "id": "safe_t_000",
+    "behavioral_type": "Pure",
+    "fitness": 0.0,
+    "total_reward": 0.0,
+    "config": {
+      "slots": [
+        "BloodClaws",
+        "HealingGland",
+        "Shell"
+      ],
+      "rewardFunction": {
+        "damageEnemyStatue": 0.2,
+        "damageEnemyUnit": 0.8,
+        "killEnemyStatue": 3.0,
+        "killEnemyUnit": 0.9,
+        "healTeammate1": 0.4,
+        "healTeammate2": 0.4,
+        "damageTaken": -0.4,
+        "teamSpirit": 0.9,
+        "timeScaling": 0.9
+      },
+      "primaryColor": "#4CAF50",
+      "secondaryColor": "#2E7D32"
+    }
+  },
+  "final_population": [
+    {
+      "id": "safe_t_000",
+      "behavioral_type": "Pure",
+      "fitness": 0.0,
+      "total_reward": 0.0
+    },
+    {
+      "id": "safe_t_001",
+      "behavioral_type": "Aggressive",
+      "fitness": 0.0,
+      "total_reward": 0.0
+    },
+    {
+      "id": "safe_t_000_gen",
+      "behavioral_type": "Pure_mut",
+      "fitness": 0.0,
+      "total_reward": 0.0
+    },
+    {
+      "id": "safe_t_001_gen",
+      "behavioral_type": "Aggressive_mut",
+      "fitness": 0.0,
+      "total_reward": 0.0
+    }
+  ]
+}

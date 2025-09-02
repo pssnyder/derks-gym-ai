@@ -180,7 +180,7 @@ class SpicyPeanutBrain:
     def get_derk_gym_config(self):
         """Return Derk Gym configuration for this brain"""
         return {
-            "slots": self.preferred_equipment.values(),
+            "slots": ["Talons", "Pistol", None],
             "rewardFunction": {
                 "damageEnemyStatue": 0.5,    # High statue damage priority
                 "damageEnemyUnit": 0.8,      # High unit damage
