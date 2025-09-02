@@ -1,0 +1,157 @@
+/* Derk's Gym AI Dashboard Styles */
+
+:root {
+    --peanut-primary: #8B4513;
+    --peanut-secondary: #D2B48C;
+    --testing-primary: #4169E1;
+    --testing-secondary: #FFD700;
+    --special-primary: #8B0000;
+    --special-secondary: #FF6347;
+    --lone-wolf-primary: #2F4F4F;
+    --lone-wolf-secondary: #778899;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.derkling-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.derkling-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.derkling-header {
+    padding: 1rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.derkling-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+                linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%), 
+                linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.team-peanuts { background: linear-gradient(135deg, var(--peanut-primary), var(--peanut-secondary)); }
+.team-testing { background: linear-gradient(135deg, var(--testing-primary), var(--testing-secondary)); }
+.team-special { background: linear-gradient(135deg, var(--special-primary), var(--special-secondary)); }
+.team-lone_wolf { background: linear-gradient(135deg, var(--lone-wolf-primary), var(--lone-wolf-secondary)); }
+
+.equipment-slot {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin: 0.125rem;
+    background: rgba(0,0,0,0.1);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.bounty-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.bounty-value {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.bounty-value.negative {
+    color: #dc3545;
+}
+
+.team-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.02);
+}
+
+.stats-card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.role-badge {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.specialty-text {
+    font-style: italic;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.color-preview {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.team-spirit-bar {
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px;
+}
+
+.team-spirit-fill {
+    background: linear-gradient(90deg, #28a745, #20c997);
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .derkling-card {
+        margin-bottom: 1rem;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+    }
+}

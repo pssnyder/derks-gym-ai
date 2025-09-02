@@ -1,0 +1,48 @@
+{
+  "nightrider_improved": {
+    "name": "Nightrider Peanut (Improved)",
+    "slots": [
+      "Magnum",
+      "HealingTail",
+      "FocusingOrb"
+    ],
+    "rewardFunction": {
+      "damageEnemyStatue": 0.5,
+      "damageEnemyUnit": 1.0,
+      "killEnemyStatue": 2.0,
+      "killEnemyUnit": 3.0,
+      "damageTaken": -0.3,
+      "healEnemy": -0.5,
+      "fallDamageTaken": -1.0,
+      "teamSpirit": 0.2,
+      "timeScaling": 0.0
+    },
+    "primaryColor": "#4B0082",
+    "secondaryColor": "#000000"
+  },
+  "assaulter_improved": {
+    "name": "The Assaulter (Improved)",
+    "slots": [
+      "Talons",
+      "IronTail",
+      "HasteOrb"
+    ],
+    "rewardFunction": {
+      "damageEnemyStatue": 0.6,
+      "damageEnemyUnit": 0.8,
+      "killEnemyStatue": 2.0,
+      "killEnemyUnit": 2.5,
+      "timeSpentAwayTerritory": 0.8,
+      "damageTaken": -0.25,
+      "friendlyFire": -0.8,
+      "fallDamageTaken": -1.0,
+      "healEnemy": -0.5,
+      "teamSpirit": 0.4,
+      "timeScaling": 0.0
+    },
+    "primaryColor": "#DC143C",
+    "secondaryColor": "#000000"
+  },
+  "timestamp": "2025-09-01",
+  "notes": "Improved configurations based on analysis"
+}

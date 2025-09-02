@@ -91,8 +91,8 @@ async def main(p1, p2, n, turbo):
     print()
     
     # Create agent servers
-    agent_p1 = DerkAgentServer(run_player, args={"DerkPlayerClass": p1}, port=8788)
-    agent_p2 = DerkAgentServer(run_player, args={"DerkPlayerClass": p2}, port=8789)
+    agent_p1 = DerkAgentServer(run_player, args={"DerkPlayerClass": p1}, port=9788)
+    agent_p2 = DerkAgentServer(run_player, args={"DerkPlayerClass": p2}, port=9789)
 
     await agent_p1.start()
     await agent_p2.start()

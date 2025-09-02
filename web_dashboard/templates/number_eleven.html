@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Number Eleven - Derk's Gym AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet">
+    <style>
+        .classified-header {
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+            color: #ff6b6b;
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+        
+        .project-status {
+            background: radial-gradient(circle, #2d2d2d, #1a1a1a);
+            border: 2px solid #ff6b6b;
+            border-radius: 15px;
+            padding: 2rem;
+            color: #ff6b6b;
+        }
+        
+        .development-phases {
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            padding: 1.5rem;
+        }
+        
+        .phase-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+        }
+        
+        .classified-text {
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-robot"></i> Derk's Gym AI
+            </a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Dashboard</a>
+                <a class="nav-link" href="/teams">Teams</a>
+                <a class="nav-link active" href="/number_eleven">Number Eleven</a>
+                <a class="nav-link" href="/battles">Battles</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card classified-header mb-4">
+                    <div class="card-body text-center">
+                        <h1 class="classified-text">
+                            <i class="fas fa-eye-slash"></i> PROJECT NUMBER ELEVEN
+                        </h1>
+                        <p class="lead classified-text">CLASSIFIED DEVELOPMENT PROJECT</p>
+                        <small class="classified-text">ACCESS LEVEL: RESTRICTED</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="project-status">
+                    <h3 class="classified-text"><i class="fas fa-cogs"></i> PROJECT STATUS</h3>
+                    <hr style="border-color: #ff6b6b;">
+                    <p class="classified-text"><strong>Phase:</strong> CONCEPTUAL DESIGN</p>
+                    <p class="classified-text"><strong>Classification:</strong> EXPERIMENTAL</p>
+                    <p class="classified-text"><strong>Priority:</strong> MAXIMUM</p>
+                    <p class="classified-text"><strong>Expected Capability:</strong> UNKNOWN</p>
+                    <div class="mt-3">
+                        <div class="progress" style="background-color: #333;">
+                            <div class="progress-bar" style="background-color: #ff6b6b; width: 15%"></div>
+                        </div>
+                        <small class="classified-text mt-1 d-block">Development Progress: 15%</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-warning">
+                        <h5><i class="fas fa-exclamation-triangle"></i> Development Notes</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle"></i>
+                            <strong>Number Eleven</strong> represents an experimental derkling design
+                            that pushes the boundaries of conventional combat strategies.
+                        </div>
+                        <ul>
+                            <li>Advanced AI behavior patterns</li>
+                            <li>Adaptive combat strategies</li>
+                            <li>Dynamic team role switching</li>
+                            <li>Experimental reward function optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="development-phases">
+                    <h3><i class="fas fa-road"></i> Development Roadmap</h3>
+                    
+                    <div class="phase-item">
+                        <h5><i class="fas fa-flask"></i> Phase 1: Conceptual Framework</h5>
+                        <p>Design core behavioral patterns and establish baseline parameters.</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-warning" style="width: 60%"></div>
+                        </div>
+                        <small>60% Complete</small>
+                    </div>
+                    
+                    <div class="phase-item">
+                        <h5><i class="fas fa-code"></i> Phase 2: Implementation</h5>
+                        <p>Develop brain class with advanced decision-making algorithms.</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-info" style="width: 20%"></div>
+                        </div>
+                        <small>20% Complete</small>
+                    </div>
+                    
+                    <div class="phase-item">
+                        <h5><i class="fas fa-vial"></i> Phase 3: Testing & Validation</h5>
+                        <p>Extensive battle testing against current derkling roster.</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-secondary" style="width: 0%"></div>
+                        </div>
+                        <small>Pending Implementation</small>
+                    </div>
+                    
+                    <div class="phase-item">
+                        <h5><i class="fas fa-rocket"></i> Phase 4: Deployment</h5>
+                        <p>Full integration into active derkling teams.</p>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-secondary" style="width: 0%"></div>
+                        </div>
+                        <small>Future Phase</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-light">
+                        <h5><i class="fas fa-chart-line"></i> Theoretical Capabilities</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <canvas id="capabilityChart" width="400" height="400"></canvas>
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Projected Performance Metrics:</h6>
+                                <table class="table table-sm">
+                                    <tr>
+                                        <td>Combat Effectiveness</td>
+                                        <td><div class="progress"><div class="progress-bar bg-danger" style="width: 95%"></div></div></td>
+                                        <td>95%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Team Coordination</td>
+                                        <td><div class="progress"><div class="progress-bar bg-success" style="width: 88%"></div></div></td>
+                                        <td>88%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Adaptability</td>
+                                        <td><div class="progress"><div class="progress-bar bg-warning" style="width: 92%"></div></div></td>
+                                        <td>92%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strategic Thinking</td>
+                                        <td><div class="progress"><div class="progress-bar bg-info" style="width: 85%"></div></div></td>
+                                        <td>85%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Create capability radar chart
+        const ctx = document.getElementById('capabilityChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Combat', 'Support', 'Strategy', 'Adaptability', 'Team Work', 'Survival'],
+                datasets: [{
+                    label: 'Number Eleven (Projected)',
+                    data: [95, 75, 85, 92, 88, 80],
+                    borderColor: '#ff6b6b',
+                    backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                    pointBackgroundColor: '#ff6b6b'
+                }, {
+                    label: 'Average Derkling',
+                    data: [70, 65, 60, 55, 70, 65],
+                    borderColor: '#6c757d',
+                    backgroundColor: 'rgba(108, 117, 125, 0.1)',
+                    pointBackgroundColor: '#6c757d'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
