@@ -12,8 +12,8 @@ from datetime import datetime
 from gym_derk.envs import DerkEnv
 
 # Import our brain classes
-from brain_profiles.peanut_class.nightrider_peanut import NightriderPeanutBrain
-from brain_profiles.testing_class.the_assaulter import TheAssaulterBrain
+from src.brain_profiles.peanut_class.nightrider_peanut import NightriderPeanutBrain
+from src.brain_profiles.testing_class.the_assaulter import TheAssaulterBrain
 
 class WorkingSteamBattleArena:
     """A working battle arena that focuses on brain testing"""
